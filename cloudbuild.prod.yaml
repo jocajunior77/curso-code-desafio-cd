@@ -16,7 +16,7 @@ steps:
 
 - id: build_docker
   name: "gcr.io/cloud-builders/docker"
-  args: ["build","-t","gcr.io/$PROJECT_ID/curso-code-desafio-cd:$SHORT_SHA","-f","Dockerfile.prod"]
+  args: ["build","-t","gcr.io/$PROJECT_ID/curso-code-desafio-cd:$SHORT_SHA","-f","Dockerfile.prod","."]
 
 - id: pushing_image
   name: 'gcr.io/cloud-builders/docker'
